@@ -130,7 +130,7 @@ type StorageAdder interface {
 	AddPrecertificate(ctx context.Context, req *sapb.AddCertificateRequest) (*emptypb.Empty, error)
 	AddSerial(ctx context.Context, req *sapb.AddSerialRequest) (*emptypb.Empty, error)
 	DeactivateRegistration(ctx context.Context, req *sapb.RegistrationID) (*emptypb.Empty, error)
-	NewOrder(ctx context.Context, order *corepb.Order) (*corepb.Order, error)
+	NewOrder(ctx context.Context, req *sapb.NewOrderRequest) (*corepb.Order, error)
 	SetOrderProcessing(ctx context.Context, order *corepb.Order) error
 	FinalizeOrder(ctx context.Context, order *corepb.Order) error
 	SetOrderError(ctx context.Context, order *corepb.Order) error
